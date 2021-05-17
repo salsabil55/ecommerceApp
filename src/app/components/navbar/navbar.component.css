@@ -244,7 +244,14 @@ ul.main-nav.nav.navbar-nav li {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
+.header-logo a {
+  color: white;
+  /* font-weight: bold; */
+  text-decoration: none;
+  line-height: 67px;
+  font-size: 30px;
+  font-family: fantasy;
+}
 /*=========================================================
 	03 -> Navigation
 ===========================================================*/
