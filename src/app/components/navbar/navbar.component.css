@@ -252,6 +252,9 @@ ul.main-nav.nav.navbar-nav li {
   font-size: 30px;
   font-family: fantasy;
 }
+.header-ctn a {
+  text-decoration: none;
+}
 a.active {
   color: #d10024 !important;
 }

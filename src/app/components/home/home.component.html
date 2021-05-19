@@ -1,5 +1,50 @@
 <div class="home">
   <div class="container">
-    <p>home works!</p>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let good of goods; index as i">
+        <div class="card">
+          <div class="imgBx">
+            <img [src]="good.photoUrl" />
+          </div>
+          <div class="contentBx">
+            <h3>{{ good.name }}</h3>
+            <h2 class="price">{{ good.price | currency }}</h2>
+            <div class="btns">
+              <button class="btn" (click)="addToCart(i)">
+                <i class="fa fa-shopping-cart"></i>
+              </button>
+              <button class="btn">
+                <i class="fa fa-heart-o"></i>
+              </button>
+            </div>
+            <a href="#" class="buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-md-4">
+        <div class="card">
+          <div class="imgBx">
+            <img src="../../../assets/img/nike.png" />
+          </div>
+          <div class="contentBx">
+            <h3>Nike Shoes</h3>
+            <h2 class="price">$100.<small>99</small></h2>
+            <a href="#" class="buy">Buy Now</a>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="col-md-4">
+        <div class="card">
+          <div class="imgBx">
+            <img src="../../../assets/img/headphones.png" />
+          </div>
+          <div class="contentBx">
+            <h3>Smart Headphones</h3>
+            <h2 class="price">$60.<small>99</small></h2>
+            <a href="#" class="buy">Buy Now</a>
+          </div>
+        </div>
+      </div> -->
+    </div>
   </div>
 </div>
