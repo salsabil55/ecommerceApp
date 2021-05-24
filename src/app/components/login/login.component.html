@@ -1,1 +1,67 @@
-<p>login works!</p>
+<div class="container">
+  <!-- signin -->
+  <div class="sign-up">
+    <form autocomplete="chrome-off" #loginForm="ngForm">
+      <!-- email -->
+      <div class="text">
+        <i class="fa fa-envelope"></i>
+        <input
+          type="email"
+          placeholder="Example@gmail.com"
+          autocomplete="chrome-off"
+          ngModel
+          #email="ngModel"
+          name="email"
+          required
+          email
+        />
+      </div>
+      <div
+        class="alert alert-danger req"
+        *ngIf="email.errors?.required && email.touched"
+      >
+        *Email is Required
+      </div>
+      <div
+        class="alert alert-danger req"
+        *ngIf="email.errors?.email && email.touched"
+      >
+        *Email isn't Correct format
+      </div>
+      <!-- password -->
+      <div class="text">
+        <i class="fa fa-lock"></i>
+        <input
+          type="password"
+          placeholder="password"
+          ngModel
+          #password="ngModel"
+          name="password"
+          required
+        />
+      </div>
+      <div
+        class="alert alert-danger req"
+        *ngIf="password.errors?.required && password.touched"
+      >
+        *Password is Required
+      </div>
+      <!-- term -->
+      <div class="terms">
+        <input type="checkbox" />
+        <p class="conditions">
+          I read and agree to <a href="#">Trems &amp; Conditions</a>
+        </p>
+      </div>
+      <!-- create button -->
+      <button class="btn" type="button" [disabled]="loginForm.invalid">
+        Login
+      </button>
+    </form>
+  </div>
+  <!-- text-container -->
+  <div class="text-container">
+    <h1 style="color: #fff; font-family: arial; line-height: 20px">Login</h1>
+    <p>Wellcome,Please Fill in the blanks for sign up</p>
+  </div>
+</div>

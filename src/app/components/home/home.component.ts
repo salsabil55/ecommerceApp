@@ -1,30 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Good } from '../interfaces/good.interface';
+import { GoodsService } from './../../services/goods.service';
+import { element } from 'protractor';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
-  goods: Good[] = [
-    {
-      name : 'Smart Watch' , price: 20 , photoUrl: 'assets/img/watch.png'
-    },
-    {
-      name : 'Nike Shoes' , price: 100 , photoUrl: 'assets/img/nike.png'
+  goods: Good[] = []
+  goodSubscribe : Subscription;
+  constructor(private gs:GoodsService) { }
 
-    },
-    {
-      name : 'Smart Headphones' , price: 50 , photoUrl: 'assets/img/headphones.png'
+  ngOnInit() {
+    this.goodSubscribe = this.gs.getAllGoods().subscribe(data=> {
 
-    }
-  ]
-  constructor() { }
+        this.goods = data.map(element => {
+          return {
+            id: element.payload.doc.id,
+            name: element.payload.doc.data()['name'],
+            price: element.payload.doc.data()['price'],
+            photoUrl: element.payload.doc.data()['photoUrl'],
 
-  ngOnInit(): void {
 
+          }
+
+        })
+      }
+    )
+  }
+
+  ngOnDestroy() {
+    this.goodSubscribe.unsubscribe()
   }
 
   addToCart(index){

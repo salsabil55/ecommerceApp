@@ -257,6 +257,7 @@ ul.main-nav.nav.navbar-nav li {
 }
 a.active {
   color: #d10024 !important;
+  border-bottom: 2px solid;
 }
 .main-nav > li > a.active:after {
   content: "";
@@ -286,10 +287,6 @@ a.active {
   margin-left: 30px;
 }
 
-.main-nav > li > a {
-  padding: 20px 0px;
-}
-
 .main-nav > li > a:hover,
 .main-nav > li > a:focus,
 .main-nav > li.active > a {
@@ -317,6 +314,10 @@ a.active {
   display: none;
 }
 
+div#responsive-nav {
+  width: 50%;
+  margin: auto;
+}
 /*----------------------------*\
 	responsive nav
 \*----------------------------*/

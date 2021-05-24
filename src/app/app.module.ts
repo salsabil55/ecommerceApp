@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {FormsModule} from '@angular/forms';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { GoodsComponent } from './components/goods/goods.component';
@@ -25,7 +28,20 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    AngularFireModule.initializeApp(
+      {
+        apiKey: "AIzaSyCayjHEH6yLVgH3h_MBD30vOODJiFvTvY0",
+        authDomain: "ecommerce-869dd.firebaseapp.com",
+        projectId: "ecommerce-869dd",
+        storageBucket: "ecommerce-869dd.appspot.com",
+        messagingSenderId: "34472343574",
+        appId: "1:34472343574:web:44d262cc734d443ad99d37",
+        measurementId: "G-4DFGPC99WM"
+      }
+    ),
+    AngularFirestoreModule
 
   ],
   providers: [],
