@@ -275,6 +275,10 @@ ul.main-nav.nav.navbar-nav button {
   border-radius: 5px;
   box-shadow: 0 3px 4px rgb(0 0 0 / 20%);
 }
+button a {
+  color: white !important;
+}
+
 /*=========================================================
 	03 -> Navigation
 ===========================================================*/
@@ -323,8 +327,9 @@ ul.main-nav.nav.navbar-nav button {
 }
 
 div#responsive-nav {
-  width: 50%;
+  width: 100%;
   margin: auto;
+  text-align: right;
 }
 /*----------------------------*\
 	responsive nav
