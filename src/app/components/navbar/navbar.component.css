@@ -267,6 +267,14 @@ a.active {
   background-color: #d10024;
   transition: 0.2s all;
 }
+ul.main-nav.nav.navbar-nav button {
+  background: #d10024;
+  border: none;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 5px;
+  box-shadow: 0 3px 4px rgb(0 0 0 / 20%);
+}
 /*=========================================================
 	03 -> Navigation
 ===========================================================*/

@@ -1,7 +1,11 @@
 <div class="container">
   <!-- signin -->
   <div class="sign-up">
-    <form autocomplete="chrome-off" #loginForm="ngForm">
+    <form
+      autocomplete="chrome-off"
+      #loginForm="ngForm"
+      (ngSubmit)="login(loginForm)"
+    >
       <!-- email -->
       <div class="text">
         <i class="fa fa-envelope"></i>
