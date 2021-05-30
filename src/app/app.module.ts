@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { GoodsComponent } from './components/goods/goods.component';
@@ -41,7 +42,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         measurementId: "G-4DFGPC99WM"
       }
     ),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
 
   ],
   providers: [],

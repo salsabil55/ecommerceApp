@@ -2,7 +2,7 @@ a {
   text-decoration: none;
 }
 .container {
-  width: 72%;
+  width: 80%;
   height: 85%;
   background-color: #1e1f29;
   position: absolute;
@@ -26,7 +26,7 @@ a {
 }
 .text-container {
   color: white;
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
